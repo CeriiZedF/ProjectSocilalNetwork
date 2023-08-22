@@ -1,0 +1,47 @@
+﻿<Window x:Class="ProjectSocilalNetwork.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectSocilalNetwork"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Closed="Window_Closed"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+            <StackPanel Width="200" VerticalAlignment="Top" Orientation="Vertical">
+            <Button 
+        x:Name="CreateGroup" 
+        Click="CreateGroup_Click">
+                Create Table Group
+            </Button>
+            <Button 
+        x:Name="InsertGroup" 
+        Click="InsertGroup_Click">
+                Insert Table Group
+            </Button>
+            <Button 
+        x:Name="GroupCount" 
+        Click="GroupCount_Click">
+                Group Count Click
+            </Button>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical"
+                    Grid.Row="1" Grid.Column="0">
+            <Label Content="Group content"/>
+            <ListView ItemsSource="{Binding columns}">
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Window>
